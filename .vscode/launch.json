@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Doar2 - Main",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn.cmd start:main"
+    }
+  ]
+}
