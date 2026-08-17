@@ -40,7 +40,7 @@ const FileManager = lazy(() => import("./pages/apps/file-manager"));
 const Mail = lazy(() => import("./pages/apps/mail"));
 
 // Classic Plus Pages
-
+const Home = lazy(() => import("./pages/home"));
 const ClassicPlusDashboardOne = lazy(
     () => import("./pages/classic-plus/dashboard-one")
 );
@@ -118,6 +118,9 @@ const App = () => {
                                 </Layout>
                             }
                         >
+                             {/* Home */}
+                             <Route path="/home" element={<Home />} />
+                             
                             {/* Dashboard Routes */}
                             <Route path="/" element={<DashboardOne />} />
                             <Route
