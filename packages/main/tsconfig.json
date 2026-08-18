@@ -1,7 +1,6 @@
 {
     "extends": "../tsconfig.react.json",
     "compilerOptions": {
-        "ignoreDeprecations": "6.0",
         "composite": true,
         "noFallthroughCasesInSwitch": true,
         "resolveJsonModule": true,

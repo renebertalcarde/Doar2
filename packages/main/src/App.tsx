@@ -1,3 +1,7 @@
+const AuthCallback = lazy(
+    () => import("./pages/auth-callback")
+);
+import AuthGuard from "./components/auth-guard";
 import { Suspense, lazy } from "react";
 import {
     BrowserRouter as Router,
@@ -118,8 +122,9 @@ const App = () => {
                                 </Layout>
                             }
                         >
-                             {/* Home */}
-                             <Route path="/home" element={<Home />} />
+                            <Route element={<AuthGuard />}>
+                                <Route path="/home" element={<Home />} />
+                            </Route>
                              
                             {/* Dashboard Routes */}
                             <Route path="/" element={<DashboardOne />} />
@@ -147,6 +152,7 @@ const App = () => {
                             {/* Authentication Routes */}
                             <Route path="/signin" element={<SignIn />} />
                             <Route path="/signup" element={<SignUp />} />
+                            <Route path="/auth/callback" element={<AuthCallback />}/>
                             <Route
                                 path="/verify-account"
                                 element={<VerifyAccount />}
