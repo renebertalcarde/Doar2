@@ -12,7 +12,18 @@ interface IListGroupItem extends SpaceProps, FlexboxProps, LayoutProps {
     horizontal?: boolean;
 }
 declare const ListGroupItem: {
-    ({ as, className, children, active, disabled, action, href, flush, horizontal, ...restProps }: IListGroupItem): JSX.Element;
+    ({
+        as,
+        className,
+        children,
+        active,
+        disabled,
+        action,
+        href,
+        flush,
+        horizontal,
+        ...restProps
+    }: IListGroupItem): JSX.Element;
     displayName: string;
 };
 export default ListGroupItem;

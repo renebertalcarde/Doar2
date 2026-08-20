@@ -7,7 +7,8 @@
         "downlevelIteration": true,
         "declaration": true,
         "emitDeclarationOnly": false,
-        "sourceMap": true
+        "sourceMap": true,
+        "ignoreDeprecations": "6.0"
     },
     "include": [
         "src",

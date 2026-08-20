@@ -57,7 +57,17 @@ interface IProps extends LayoutProps {
     data: VectorMapProps;
 }
 declare const VectorMap: {
-    ({ width, height, backgroundColor, borderColor, color, checkedLayers, selectedColor, tooltip, data, }: IProps): JSX.Element;
+    ({
+        width,
+        height,
+        backgroundColor,
+        borderColor,
+        color,
+        checkedLayers,
+        selectedColor,
+        tooltip,
+        data,
+    }: IProps): JSX.Element;
     defaultProps: {
         backgroundColor: string;
         borderColor: string;

@@ -5,5 +5,10 @@ interface IProps extends SpaceProps {
     children: React.ReactNode;
     dir?: "append" | "prepend";
 }
-declare const InputGroupAddon: ({ children, dir, className, ...rest }: IProps) => JSX.Element;
+declare const InputGroupAddon: ({
+    children,
+    dir,
+    className,
+    ...rest
+}: IProps) => JSX.Element;
 export default InputGroupAddon;

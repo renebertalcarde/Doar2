@@ -7,7 +7,14 @@ export interface IProps {
      */
     className?: string;
 }
-declare type CustomStyle = "classic" | "icon" | "line" | "sidebar" | "aside" | "social" | "with-icon";
+declare type CustomStyle =
+    | "classic"
+    | "icon"
+    | "line"
+    | "sidebar"
+    | "aside"
+    | "social"
+    | "with-icon";
 interface INav extends IProps, FlexboxProps, SpaceProps, TypographyProps {
     pills?: boolean;
     align?: "left" | "right" | "center";
@@ -15,5 +22,14 @@ interface INav extends IProps, FlexboxProps, SpaceProps, TypographyProps {
     fill?: boolean;
     customStyle?: CustomStyle;
 }
-declare const Nav: ({ children, className, pills, align, vertical, fill, customStyle, ...rest }: INav) => JSX.Element;
+declare const Nav: ({
+    children,
+    className,
+    pills,
+    align,
+    vertical,
+    fill,
+    customStyle,
+    ...rest
+}: INav) => JSX.Element;
 export default Nav;

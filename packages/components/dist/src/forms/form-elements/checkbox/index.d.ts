@@ -4,5 +4,7 @@ interface IProps extends IInputProps {
     checked?: boolean;
     label: string;
 }
-declare const Checkbox: import("react").ForwardRefExoticComponent<IProps & import("react").RefAttributes<HTMLInputElement>>;
+declare const Checkbox: import("react").ForwardRefExoticComponent<
+    IProps & import("react").RefAttributes<HTMLInputElement>
+>;
 export default Checkbox;

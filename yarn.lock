@@ -5354,6 +5354,11 @@ anymatch@^3.0.0, anymatch@^3.0.3, anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+apexcharts@5.15.1:
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-5.15.1.tgz#e0ae83e4f5af9cb4ab0371c8d878a3cdf547e328"
+  integrity sha512-7sC5bKzBPg48AbgTMhkCVXuReLQj/MHTucaOkb+eAgq/2GQCj/mjFrAn97k7yNySdIQlmxoJs8VEAQUb33cN3A==
+
 apexcharts@^3.35.4:
   version "3.35.4"
   resolved "https://registry.yarnpkg.com/apexcharts/-/apexcharts-3.35.4.tgz#347140240fad6e646a76c7bc8e7e75294c2206b2"
@@ -14342,6 +14347,13 @@ raw-loader@^4.0.2:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
+
+react-apexcharts@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-apexcharts/-/react-apexcharts-2.1.1.tgz#63c141072e64c03b3e07201b36264e4e4001f745"
+  integrity sha512-aV25n+1ZdAzRG0KhODVC48K8WbhMKBAr3yWSeaaBqM1ySn22kSSKblsNCUvlwegsT+cdMLuOrK9xGZb+IK+OkQ==
+  dependencies:
+    prop-types "^15.8.1"
 
 react-apexcharts@^1.4.0:
   version "1.4.0"

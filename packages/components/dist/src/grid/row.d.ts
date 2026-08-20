@@ -7,5 +7,10 @@ interface IRowProps extends SpaceProps, RowProps {
     gutters?: number;
     noGutter?: boolean;
 }
-declare const Row: ({ className, gutters, noGutter, ...props }: IRowProps) => JSX.Element;
+declare const Row: ({
+    className,
+    gutters,
+    noGutter,
+    ...props
+}: IRowProps) => JSX.Element;
 export default Row;

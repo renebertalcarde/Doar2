@@ -29,7 +29,8 @@
     "serve-storybook": "lerna exec --scope=\"@doar/components\" yarn serve-storybook ",
     "clean": "lerna run clean && rimraf node_modules",
     "clean:update": "lerna clean && lerna bootstrap",
-    "clean-root": "rimraf node_modules"
+    "clean-root": "rimraf node_modules",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.31.0",
@@ -45,5 +46,8 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.7.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "apexcharts": "5.15.1",
+    "react-apexcharts": "2.1.1"
+  }
 }

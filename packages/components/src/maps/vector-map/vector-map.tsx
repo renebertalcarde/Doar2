@@ -80,7 +80,7 @@ const VectorMap = ({
     const [tooltipY, setTooltipY] = useState<number>(0);
     const [tooltipX, setTooltipX] = useState<number>(0);
 
-    const onClick = (e: MouseEvent) => {
+    const onClick = (e: React.MouseEvent<SVGPathElement>) => {
         const target = e.target as HTMLElement;
         const id: string = (target.attributes as any)?.id.value;
         if (selected.includes(id)) {
@@ -90,14 +90,14 @@ const VectorMap = ({
         }
     };
 
-    const onMouseOver = (e: MouseEvent) => {
+    const onMouseOver = (e: React.MouseEvent<SVGPathElement>) => {
         const target = e.target as HTMLElement;
         const name: string = (target.attributes as any)?.name.value;
         setTooltipeName(name);
         setIsTooltipVisible(true);
     };
 
-    const onMouseMove = (e: MouseEvent) => {
+    const onMouseMove = (e: React.MouseEvent<SVGPathElement>) => {
         setTooltipY(e.clientY - 20);
         setTooltipX(e.clientX - 10);
     };

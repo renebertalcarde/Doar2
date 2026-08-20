@@ -8,7 +8,12 @@ interface DropdownProps {
     className?: string;
 }
 declare const Dropdown: {
-    ({ children, direction, className, ...restProps }: DropdownProps): JSX.Element;
+    ({
+        children,
+        direction,
+        className,
+        ...restProps
+    }: DropdownProps): JSX.Element;
     defaultProps: {
         direction: string;
     };

@@ -6,7 +6,13 @@ interface IDropMenu {
     className?: string;
 }
 declare const DropdownMenu: {
-    ({ children, show, direction, className, ...restProps }: IDropMenu): JSX.Element;
+    ({
+        children,
+        show,
+        direction,
+        className,
+        ...restProps
+    }: IDropMenu): JSX.Element;
     displayName: string;
 };
 export default DropdownMenu;

@@ -5,5 +5,10 @@ interface IDropItem {
     className?: string;
     active?: boolean;
 }
-declare const DropdownItem: ({ children, path, className, active }: IDropItem) => JSX.Element;
+declare const DropdownItem: ({
+    children,
+    path,
+    className,
+    active,
+}: IDropItem) => JSX.Element;
 export default DropdownItem;

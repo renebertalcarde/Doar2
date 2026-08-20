@@ -4,5 +4,9 @@ interface IMediaBodyProps extends SpaceProps {
     className?: string;
     children: React.ReactNode;
 }
-declare const MediaBody: ({ children, className, ...restProps }: IMediaBodyProps) => JSX.Element;
+declare const MediaBody: ({
+    children,
+    className,
+    ...restProps
+}: IMediaBodyProps) => JSX.Element;
 export default MediaBody;

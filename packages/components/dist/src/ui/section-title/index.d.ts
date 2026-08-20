@@ -6,5 +6,10 @@ interface IProps {
     descProps?: TypographyProps;
     titleProps?: TypographyProps;
 }
-declare const SectionTitle: ({ title, desc, descProps, titleProps }: IProps) => JSX.Element;
+declare const SectionTitle: ({
+    title,
+    desc,
+    descProps,
+    titleProps,
+}: IProps) => JSX.Element;
 export default SectionTitle;

@@ -5,5 +5,10 @@ interface IProps extends SpaceProps, TypographyProps, LayoutProps {
     htmlFor: string;
     className?: string;
 }
-declare const Label: ({ children, htmlFor, className, ...rest }: IProps) => JSX.Element;
+declare const Label: ({
+    children,
+    htmlFor,
+    className,
+    ...rest
+}: IProps) => JSX.Element;
 export default Label;

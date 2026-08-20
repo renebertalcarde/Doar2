@@ -5,5 +5,10 @@ interface IGroupProps extends FlexboxProps, SpaceProps {
     className?: string;
     size?: "sm";
 }
-declare const ImageGroup: ({ children, className, size, ...restProps }: IGroupProps) => JSX.Element;
+declare const ImageGroup: ({
+    children,
+    className,
+    size,
+    ...restProps
+}: IGroupProps) => JSX.Element;
 export default ImageGroup;

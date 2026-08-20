@@ -1,7 +1,23 @@
 /// <reference types="react" />
 import { ICircleProps } from "./types";
 declare const LeafletCircle: {
-    ({ lat, lng, radius, stroke, color, weight, opacity, lineCap, lineJoin, dashArray, dashOffset, fill, fillColor, fillOpacity, fillRule, }: ICircleProps): JSX.Element;
+    ({
+        lat,
+        lng,
+        radius,
+        stroke,
+        color,
+        weight,
+        opacity,
+        lineCap,
+        lineJoin,
+        dashArray,
+        dashOffset,
+        fill,
+        fillColor,
+        fillOpacity,
+        fillRule,
+    }: ICircleProps): JSX.Element;
     defaultProps: {
         radius: number;
         stroke: boolean;

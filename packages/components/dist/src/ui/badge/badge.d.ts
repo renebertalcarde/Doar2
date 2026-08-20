@@ -5,7 +5,15 @@ export interface BadgeProps extends SpaceProps {
     /**
      * The visual style of the badge
      */
-    color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+    color?:
+        | "primary"
+        | "secondary"
+        | "success"
+        | "danger"
+        | "warning"
+        | "info"
+        | "light"
+        | "dark";
     /**
      *  Optional. Default is `contained`.
      */
@@ -24,7 +32,15 @@ export interface BadgeProps extends SpaceProps {
     className?: string;
 }
 declare const Badge: {
-    ({ color, variant, shape, pill, children, className, ...restProps }: BadgeProps): JSX.Element;
+    ({
+        color,
+        variant,
+        shape,
+        pill,
+        children,
+        className,
+        ...restProps
+    }: BadgeProps): JSX.Element;
     defaultProps: {
         color: string;
         variant: string;

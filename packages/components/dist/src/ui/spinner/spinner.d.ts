@@ -11,7 +11,16 @@ export interface IProps {
     /**
      * Default is `text`.
      */
-    color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "white";
+    color?:
+        | "primary"
+        | "secondary"
+        | "success"
+        | "danger"
+        | "warning"
+        | "info"
+        | "light"
+        | "dark"
+        | "white";
     /**
      * Default is `md`.
      */

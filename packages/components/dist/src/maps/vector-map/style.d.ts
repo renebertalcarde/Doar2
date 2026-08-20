@@ -6,5 +6,10 @@ interface IProps extends LayoutProps {
     $color?: string;
     $slColor?: string;
 }
-export declare const StyledMap: import("styled-components").StyledComponent<({ width, height, ...props }: any) => JSX.Element, any, IProps, never>;
+export declare const StyledMap: import("styled-components").StyledComponent<
+    ({ width, height, ...props }: any) => JSX.Element,
+    any,
+    IProps,
+    never
+>;
 export {};

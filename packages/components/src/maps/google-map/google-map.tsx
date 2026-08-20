@@ -16,10 +16,10 @@ type MapProps = google.maps.MapOptions &
 
 const MyMap: React.FC<MapProps> = ({ width, height, marker, ...options }) => {
     if (!MapKey) {
-    throw new Error(
-        "Google Maps API key is not configured. Set REACT_APP_MAPKEY."
-    );
-}
+        throw new Error(
+            "Google Maps API key is not configured. Set REACT_APP_MAPKEY."
+        );
+    }
     return (
         <StyledMap width={width} height={height}>
             <Wrapper apiKey={MapKey} render={render}>

@@ -5,7 +5,6 @@ interface IProps extends SpaceProps {
     children: React.ReactNode;
     className?: string;
 }
-interface IColProps extends IProps, ColProps, BorderProps, TypographyProps {
-}
+interface IColProps extends IProps, ColProps, BorderProps, TypographyProps {}
 declare const Col: ({ className, ...props }: IColProps) => JSX.Element;
 export default Col;

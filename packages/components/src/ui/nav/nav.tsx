@@ -38,19 +38,13 @@ const Nav = ({
     customStyle,
     ...rest
 }: INav) => {
-    const RenderChild = Children.map(children, (el) => {
-        if (!isValidElement(el)) return el;
-        const child = el;
-        if (child !== null) {
-            const childType = child.type as FunctionComponent;
-            const name = childType.displayName || childType.name;
-            if (name === "NavLink") {
-                return (
-                    <child.type {...child.props} customStyle={customStyle} />
-                );
-            }
+    const RenderChild = Children.map(children, (child) => {
+        if (!isValidElement(child)) {
+            return child;
         }
-        return <child.type {...child.props} />;
+
+        const Child = child.type;
+        return <Child {...child.props} />;
     });
 
     return (

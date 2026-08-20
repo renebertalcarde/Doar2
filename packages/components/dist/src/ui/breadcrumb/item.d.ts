@@ -5,5 +5,10 @@ interface IBreadcrumbItem {
     active?: boolean;
     className?: string;
 }
-declare const BreadcrumbItem: ({ children, path, active, className, }: IBreadcrumbItem) => JSX.Element;
+declare const BreadcrumbItem: ({
+    children,
+    path,
+    active,
+    className,
+}: IBreadcrumbItem) => JSX.Element;
 export default BreadcrumbItem;

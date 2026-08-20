@@ -1,5 +1,10 @@
 /// <reference types="react" />
-import { SpaceProps, ColorProps, TypographyProps, LayoutProps } from "@doar/shared/styled";
+import {
+    SpaceProps,
+    ColorProps,
+    TypographyProps,
+    LayoutProps,
+} from "@doar/shared/styled";
 interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     path: string;
     children: React.ReactNode;
@@ -11,7 +16,17 @@ interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
     variant?: "link1" | "link2" | "link3";
 }
 declare const Anchor: {
-    ({ path, children, className, rel, label, target, onClick, variant, ...rest }: IProps): JSX.Element;
+    ({
+        path,
+        children,
+        className,
+        rel,
+        label,
+        target,
+        onClick,
+        variant,
+        ...rest
+    }: IProps): JSX.Element;
     defaultProps: {
         target: string;
         rel: string;

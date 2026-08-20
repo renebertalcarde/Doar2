@@ -855,7 +855,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.primary")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
 
     ${(props) =>
@@ -872,7 +872,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.secondary")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
 
     ${(props) =>
@@ -889,7 +889,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.success")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
 
     ${(props) =>
@@ -906,7 +906,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.danger")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
 
     ${(props) =>
@@ -923,7 +923,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.warning")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
 
     ${(props) =>
@@ -938,7 +938,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.info")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
     ${(props) =>
         props.$active &&
@@ -954,7 +954,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.light")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
     ${(props) =>
         props.$active &&
@@ -968,7 +968,7 @@ const buttonStyles = css<IProps>`
                 themeGet("colors.dark")(props) as string
             )
                 .darken(10)
-                .toString()}; ;
+                .toString()};
         `}
     ${(props) =>
         props.$active &&

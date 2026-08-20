@@ -7,8 +7,7 @@ export interface IProps {
      */
     className?: string;
 }
-export interface IBody extends IProps, SpaceProps {
-}
+export interface IBody extends IProps, SpaceProps {}
 export interface IClose extends IProps {
     onClose?: () => void;
 }

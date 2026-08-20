@@ -22,7 +22,10 @@ interface SparklinesBarsProps {
     style?: React.SVGAttributes<React.ReactSVGElement>["style"];
     barWidth?: number;
     margin?: number;
-    onMouseMove?: (p: Point, event: React.MouseEvent<React.ReactSVGElement>) => void;
+    onMouseMove?: (
+        p: Point,
+        event: React.MouseEvent<React.ReactSVGElement>
+    ) => void;
 }
 export interface ISparklineProps extends SparklinesProps, SparklinesBarsProps {
     barStyle?: React.SVGAttributes<React.ReactSVGElement>["style"];
@@ -31,7 +34,11 @@ export interface ISparklineProps extends SparklinesProps, SparklinesBarsProps {
 interface SparklinesLineProps {
     color?: React.SVGAttributes<React.ReactSVGElement>["color"];
     style?: React.SVGAttributes<React.ReactSVGElement>["style"];
-    onMouseMove?: (event: "enter" | "click", value: number, point: Point) => void;
+    onMouseMove?: (
+        event: "enter" | "click",
+        value: number,
+        point: Point
+    ) => void;
 }
 interface SparklinesSpotsProps {
     spotSize?: number;
@@ -40,7 +47,10 @@ interface SparklinesSpotsProps {
         [change: string]: string;
     };
 }
-export interface ISparklineLineProps extends SparklinesProps, SparklinesLineProps, SparklinesSpotsProps {
+export interface ISparklineLineProps
+    extends SparklinesProps,
+        SparklinesLineProps,
+        SparklinesSpotsProps {
     color?: React.SVGAttributes<React.ReactSVGElement>["color"];
     lineStyle?: React.SVGAttributes<React.ReactSVGElement>["style"];
     hasSpot?: boolean;

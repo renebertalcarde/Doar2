@@ -7,5 +7,12 @@ interface IListGroup extends SpaceProps {
     flush?: boolean;
     horizontal?: boolean;
 }
-declare const ListGroup: ({ as, className, children, flush, horizontal, ...restProps }: IListGroup) => JSX.Element;
+declare const ListGroup: ({
+    as,
+    className,
+    children,
+    flush,
+    horizontal,
+    ...restProps
+}: IListGroup) => JSX.Element;
 export default ListGroup;

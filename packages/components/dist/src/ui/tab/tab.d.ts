@@ -10,6 +10,24 @@ interface ITab extends TabsProps {
     vertical?: boolean;
     variation?: "line";
 }
-export declare const TabWrap: ({ className, children, justified, vertical, variation, defaultFocus, defaultIndex, disabledTabClassName, domRef, forceRenderTabPanel, onSelect, selectedIndex, selectedTabClassName, selectedTabPanelClassName, }: ITab) => JSX.Element;
-export declare const TabContent: ({ className, children }: IProps) => JSX.Element;
+export declare const TabWrap: ({
+    className,
+    children,
+    justified,
+    vertical,
+    variation,
+    defaultFocus,
+    defaultIndex,
+    disabledTabClassName,
+    domRef,
+    forceRenderTabPanel,
+    onSelect,
+    selectedIndex,
+    selectedTabClassName,
+    selectedTabPanelClassName,
+}: ITab) => JSX.Element;
+export declare const TabContent: ({
+    className,
+    children,
+}: IProps) => JSX.Element;
 export { Tab, TabPanel, TabList };

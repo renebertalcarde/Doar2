@@ -1,6 +1,14 @@
 /// <reference types="react" />
 import { SpaceProps, BorderProps } from "@doar/shared/styled";
-declare type TColor = "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+declare type TColor =
+    | "primary"
+    | "secondary"
+    | "success"
+    | "danger"
+    | "warning"
+    | "info"
+    | "light"
+    | "dark";
 interface IProps extends SpaceProps, BorderProps {
     children: React.ReactNode;
     className?: string;
@@ -12,5 +20,16 @@ interface IProps extends SpaceProps, BorderProps {
     color?: TColor;
     borderless?: boolean;
 }
-declare const Table: ({ children, className, theadColor, striped, bordered, hover, compact, color, borderless, ...restProps }: IProps) => JSX.Element;
+declare const Table: ({
+    children,
+    className,
+    theadColor,
+    striped,
+    bordered,
+    hover,
+    compact,
+    color,
+    borderless,
+    ...restProps
+}: IProps) => JSX.Element;
 export default Table;

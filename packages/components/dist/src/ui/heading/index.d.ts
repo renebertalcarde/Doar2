@@ -6,5 +6,7 @@ interface IProps extends SpaceProps, ColorProps, TypographyProps {
     className?: string;
     tt?: string;
 }
-declare const Heading: import("react").ForwardRefExoticComponent<IProps & import("react").RefAttributes<HTMLHeadingElement>>;
+declare const Heading: import("react").ForwardRefExoticComponent<
+    IProps & import("react").RefAttributes<HTMLHeadingElement>
+>;
 export default Heading;

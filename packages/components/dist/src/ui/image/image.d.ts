@@ -30,5 +30,15 @@ export interface ImageProps extends SpaceProps, LayoutProps {
      */
     className?: string;
 }
-declare const Image: ({ src, alt, size, shape, fluid, align, fit, className, ...restProps }: ImageProps) => JSX.Element;
+declare const Image: ({
+    src,
+    alt,
+    size,
+    shape,
+    fluid,
+    align,
+    fit,
+    className,
+    ...restProps
+}: ImageProps) => JSX.Element;
 export default Image;

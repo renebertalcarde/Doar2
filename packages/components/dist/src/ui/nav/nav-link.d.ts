@@ -6,7 +6,14 @@ export interface IProps {
      */
     className?: string;
 }
-declare type CustomStyle = "classic" | "icon" | "line" | "sidebar" | "aside" | "social" | "with-icon";
+declare type CustomStyle =
+    | "classic"
+    | "icon"
+    | "line"
+    | "sidebar"
+    | "aside"
+    | "social"
+    | "with-icon";
 interface ILink extends IProps {
     path: string;
     active?: boolean;
@@ -19,7 +26,20 @@ interface ILink extends IProps {
     target?: "_blank" | "_self" | "_parent" | "_top";
 }
 declare const NavLink: {
-    ({ children, className, path, active, onClick, customStyle, iconPosition, iconDistance, rel, label, target, ...rest }: ILink): JSX.Element;
+    ({
+        children,
+        className,
+        path,
+        active,
+        onClick,
+        customStyle,
+        iconPosition,
+        iconDistance,
+        rel,
+        label,
+        target,
+        ...rest
+    }: ILink): JSX.Element;
     defaultProps: {
         iconPosition: string;
         iconDistance: string;

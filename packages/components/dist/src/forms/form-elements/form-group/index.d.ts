@@ -4,5 +4,9 @@ interface IProps extends SpaceProps {
     className?: string;
     children: React.ReactNode;
 }
-declare const FormGroup: ({ children, className, ...rest }: IProps) => JSX.Element;
+declare const FormGroup: ({
+    children,
+    className,
+    ...rest
+}: IProps) => JSX.Element;
 export default FormGroup;

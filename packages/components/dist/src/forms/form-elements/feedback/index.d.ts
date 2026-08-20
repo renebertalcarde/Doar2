@@ -5,5 +5,10 @@ export interface IFeedback {
     showState?: boolean;
     showErrorOnly?: boolean;
 }
-declare const Feedback: ({ state, showState, showErrorOnly, children }: IFeedback) => JSX.Element;
+declare const Feedback: ({
+    state,
+    showState,
+    showErrorOnly,
+    children,
+}: IFeedback) => JSX.Element;
 export default Feedback;

@@ -43,7 +43,19 @@ export interface IProps extends SpaceProps {
     opacity?: number;
 }
 declare const Progress: {
-    ({ className, now, min, max, isLabel, bg, height, striped, animated, opacity, ...restProps }: IProps): JSX.Element;
+    ({
+        className,
+        now,
+        min,
+        max,
+        isLabel,
+        bg,
+        height,
+        striped,
+        animated,
+        opacity,
+        ...restProps
+    }: IProps): JSX.Element;
     defaultProps: {
         now: number;
         min: number;

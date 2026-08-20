@@ -6,5 +6,11 @@ interface IAvatarText extends ColorProps, TypographyProps {
     size?: "default" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
     shape?: "circle" | "rounded" | "square";
 }
-declare const AvatarInitial: ({ children, size, shape, className, ...restProps }: IAvatarText) => JSX.Element;
+declare const AvatarInitial: ({
+    children,
+    size,
+    shape,
+    className,
+    ...restProps
+}: IAvatarText) => JSX.Element;
 export default AvatarInitial;

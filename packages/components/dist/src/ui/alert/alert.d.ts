@@ -8,7 +8,15 @@ export interface AlertProps {
     /**
      * Required. Default is `primary`.
      */
-    color: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark";
+    color:
+        | "primary"
+        | "secondary"
+        | "success"
+        | "danger"
+        | "warning"
+        | "info"
+        | "light"
+        | "dark";
     /**
      * Required. Default is `false` make it `true` to get solid background.
      */
@@ -27,7 +35,15 @@ export interface AlertProps {
     hasIcon: boolean;
 }
 declare const Alert: {
-    ({ children, variant, color, solid, hasLink, isDismissible, hasIcon, }: AlertProps): JSX.Element | null;
+    ({
+        children,
+        variant,
+        color,
+        solid,
+        hasLink,
+        isDismissible,
+        hasIcon,
+    }: AlertProps): JSX.Element | null;
     defaultProps: {
         variant: string;
         color: string;

@@ -5,5 +5,10 @@ interface IInput extends IFeedback, SpaceProps, BorderProps {
     $height?: string | any[];
     $customStyle?: TCustomStyle;
 }
-export declare const StyledTextarea: import("styled-components").StyledComponent<"textarea", any, IInput, never>;
+export declare const StyledTextarea: import("styled-components").StyledComponent<
+    "textarea",
+    any,
+    IInput,
+    never
+>;
 export {};

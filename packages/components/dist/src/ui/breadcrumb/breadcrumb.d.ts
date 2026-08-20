@@ -11,5 +11,10 @@ interface IBreadcrumb extends SpaceProps {
      */
     as?: React.ElementType;
 }
-export declare const Breadcrumb: ({ children, className, as, ...restProps }: IBreadcrumb) => JSX.Element;
+export declare const Breadcrumb: ({
+    children,
+    className,
+    as,
+    ...restProps
+}: IBreadcrumb) => JSX.Element;
 export default Breadcrumb;

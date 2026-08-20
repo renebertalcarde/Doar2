@@ -118,9 +118,9 @@ const App = () => {
                                 </Layout>
                             }
                         >
-                             {/* Home */}
-                             <Route path="/home" element={<Home />} />
-                             
+                            {/* Home */}
+                            <Route path="/home" element={<Home />} />
+
                             {/* Dashboard Routes */}
                             <Route path="/" element={<DashboardOne />} />
                             <Route

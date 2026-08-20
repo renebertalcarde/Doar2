@@ -5,5 +5,10 @@ interface IMediaProps extends SpaceProps, FlexboxProps, LayoutProps {
     className?: string;
     children: React.ReactNode;
 }
-declare const Media: ({ children, as, className, ...restProps }: IMediaProps) => JSX.Element;
+declare const Media: ({
+    children,
+    as,
+    className,
+    ...restProps
+}: IMediaProps) => JSX.Element;
 export default Media;

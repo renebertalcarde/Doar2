@@ -1,6 +1,5 @@
 export const MapKey =
-    typeof globalThis !== "undefined" &&
-    "process" in globalThis
+    typeof globalThis !== "undefined" && "process" in globalThis
         ? (
               globalThis as {
                   process?: {
@@ -11,8 +10,7 @@ export const MapKey =
         : undefined;
 
 export const MapBoxAccessKey =
-    typeof globalThis !== "undefined" &&
-    "process" in globalThis
+    typeof globalThis !== "undefined" && "process" in globalThis
         ? (
               globalThis as {
                   process?: {

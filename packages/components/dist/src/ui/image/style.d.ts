@@ -6,9 +6,33 @@ interface ImageProps extends SpaceProps, LayoutProps {
     $align?: "left" | "right";
     $fit?: "cover" | "contain";
 }
-export declare const StyledImage: import("styled-components").StyledComponent<({ m, mx, my, ml, mr, mt, mb, maxWidth, maxHeight, width, height, display, ...rest }: any) => JSX.Element, any, ImageProps, never>;
+export declare const StyledImage: import("styled-components").StyledComponent<
+    ({
+        m,
+        mx,
+        my,
+        ml,
+        mr,
+        mt,
+        mb,
+        maxWidth,
+        maxHeight,
+        width,
+        height,
+        display,
+        ...rest
+    }: any) => JSX.Element,
+    any,
+    ImageProps,
+    never
+>;
 interface IGroup extends FlexboxProps, SpaceProps {
     $size?: "sm";
 }
-export declare const StyledGroup: import("styled-components").StyledComponent<({ mb, alignItems, justifyContent, ...rest }: any) => JSX.Element, any, IGroup, never>;
+export declare const StyledGroup: import("styled-components").StyledComponent<
+    ({ mb, alignItems, justifyContent, ...rest }: any) => JSX.Element,
+    any,
+    IGroup,
+    never
+>;
 export {};

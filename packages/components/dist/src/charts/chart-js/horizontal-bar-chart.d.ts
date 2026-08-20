@@ -16,5 +16,7 @@ export interface IProps {
     width?: number | string;
     height?: number | string;
 }
-declare const HorizontalBarChart: import("react").ForwardRefExoticComponent<IProps & import("react").RefAttributes<any>>;
+declare const HorizontalBarChart: import("react").ForwardRefExoticComponent<
+    IProps & import("react").RefAttributes<any>
+>;
 export default HorizontalBarChart;

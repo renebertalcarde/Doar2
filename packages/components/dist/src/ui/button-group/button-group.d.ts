@@ -20,7 +20,14 @@ export interface IProps extends SpaceProps {
     className?: string;
 }
 declare const ButtonGroup: {
-    ({ children, size, vertical, label, className, ...restProps }: IProps): JSX.Element;
+    ({
+        children,
+        size,
+        vertical,
+        label,
+        className,
+        ...restProps
+    }: IProps): JSX.Element;
     defaultProps: {
         label: string;
     };

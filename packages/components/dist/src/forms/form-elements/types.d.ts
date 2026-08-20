@@ -5,7 +5,10 @@ export interface IFeedback {
     $showState?: boolean;
     $showErrorOnly?: boolean;
 }
-declare type TInput = HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+declare type TInput =
+    | HTMLInputElement
+    | HTMLTextAreaElement
+    | HTMLSelectElement;
 export declare type TCustomStyle = "noborder" | "nofocus";
 export interface IInputProps extends SpaceProps, BorderProps, TypographyProps {
     className?: string;

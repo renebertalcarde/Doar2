@@ -12,5 +12,13 @@ interface IProps {
         [x: string]: any;
     };
 }
-declare const DataTable: ({ data, columns, theme, customStyles, pagination, paginationPerPage, paginationRowsPerPageOptions, }: IProps) => JSX.Element;
+declare const DataTable: ({
+    data,
+    columns,
+    theme,
+    customStyles,
+    pagination,
+    paginationPerPage,
+    paginationRowsPerPageOptions,
+}: IProps) => JSX.Element;
 export default DataTable;

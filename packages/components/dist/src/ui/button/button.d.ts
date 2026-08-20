@@ -1,6 +1,15 @@
 /// <reference types="react" />
-import { SpaceProps, LayoutProps, BorderProps, TypographyProps } from "@doar/shared/styled";
-export interface ButtonProps extends SpaceProps, LayoutProps, BorderProps, TypographyProps {
+import {
+    SpaceProps,
+    LayoutProps,
+    BorderProps,
+    TypographyProps,
+} from "@doar/shared/styled";
+export interface ButtonProps
+    extends SpaceProps,
+        LayoutProps,
+        BorderProps,
+        TypographyProps {
     /**
      * Required.
      */
@@ -16,7 +25,19 @@ export interface ButtonProps extends SpaceProps, LayoutProps, BorderProps, Typog
     /**
      * Optional. Default is `primary`.
      */
-    color?: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "white" | "brand2" | "facebook" | "twitter";
+    color?:
+        | "primary"
+        | "secondary"
+        | "success"
+        | "danger"
+        | "warning"
+        | "info"
+        | "light"
+        | "dark"
+        | "white"
+        | "brand2"
+        | "facebook"
+        | "twitter";
     /**
      * Optional. Default is `md`.
      */
@@ -79,7 +100,28 @@ export interface ButtonProps extends SpaceProps, LayoutProps, BorderProps, Typog
     uppercase?: boolean;
 }
 declare const Button: {
-    ({ children, type, variant, color, size, shape, fullwidth, active, disabled, iconButton, hasIcon, label, onClick, className, path, iconPosition, iconSize, iconSpace, uppercase, ...restProps }: ButtonProps): JSX.Element;
+    ({
+        children,
+        type,
+        variant,
+        color,
+        size,
+        shape,
+        fullwidth,
+        active,
+        disabled,
+        iconButton,
+        hasIcon,
+        label,
+        onClick,
+        className,
+        path,
+        iconPosition,
+        iconSize,
+        iconSpace,
+        uppercase,
+        ...restProps
+    }: ButtonProps): JSX.Element;
     defaultProps: {
         type: string;
         variant: string;

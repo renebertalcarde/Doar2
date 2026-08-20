@@ -20,7 +20,14 @@ interface IAvatar extends LayoutProps, SpaceProps {
     status?: "online" | "offline";
 }
 declare const Avatar: {
-    ({ size, shape, status, className, children, ...restProps }: IAvatar): JSX.Element;
+    ({
+        size,
+        shape,
+        status,
+        className,
+        children,
+        ...restProps
+    }: IAvatar): JSX.Element;
     defaultProps: {
         size: string;
         shape: string;
