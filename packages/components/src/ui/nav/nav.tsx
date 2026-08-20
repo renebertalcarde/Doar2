@@ -1,4 +1,9 @@
-import { Children, isValidElement, FunctionComponent } from "react";
+import {
+    Children,
+    FunctionComponent,
+    isValidElement,
+    cloneElement,
+} from "react";
 import classnames from "clsx";
 import { FlexboxProps, SpaceProps, TypographyProps } from "@doar/shared/styled";
 import { StyledNav } from "./style";
@@ -40,17 +45,15 @@ const Nav = ({
 }: INav) => {
     const RenderChild = Children.map(children, (el) => {
         if (!isValidElement(el)) return el;
-        const child = el;
-        if (child !== null) {
-            const childType = child.type as FunctionComponent;
-            const name = childType.displayName || childType.name;
-            if (name === "NavLink") {
-                return (
-                    <child.type {...child.props} customStyle={customStyle} />
-                );
-            }
+
+        const childType = el.type as FunctionComponent;
+        const name = childType.displayName || childType.name;
+
+        if (name === "NavLink") {
+            return cloneElement(el, { customStyle });
         }
-        return <child.type {...child.props} />;
+
+        return cloneElement(el);
     });
 
     return (

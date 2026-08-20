@@ -23,9 +23,7 @@ const AuthCallback = () => {
         }
 
         if (!code || !state) {
-            console.error(
-                "Missing authorization code or state."
-            );
+            console.error("Missing authorization code or state.");
 
             navigate("/signin", { replace: true });
             return;
@@ -36,10 +34,7 @@ const AuthCallback = () => {
                 navigate("/home", { replace: true });
             })
             .catch((err) => {
-                console.error(
-                    "Authentication callback failed:",
-                    err
-                );
+                console.error("Authentication callback failed:", err);
 
                 navigate("/signin", { replace: true });
             });

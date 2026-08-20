@@ -23,10 +23,7 @@ function randomString(length: number): string {
 async function createCodeChallenge(verifier: string): Promise<string> {
     const data = new TextEncoder().encode(verifier);
 
-    const digest = await crypto.subtle.digest(
-        "SHA-256",
-        data
-    );
+    const digest = await crypto.subtle.digest("SHA-256", data);
 
     return base64UrlEncode(new Uint8Array(digest));
 }
@@ -69,41 +66,41 @@ export async function handleCallback(
         throw new Error("PKCE verifier was not found.");
     }
 
-    const response = await fetch(
-        `${AUTH_SERVER}/connect/token`,
-        {
-            method: "POST",
-            headers: {
-                "Content-Type":
-                    "application/x-www-form-urlencoded",
-            },
-            body: new URLSearchParams({
-                grant_type: "authorization_code",
-                client_id: CLIENT_ID,
-                code,
-                redirect_uri: REDIRECT_URI,
-                code_verifier: verifier,
-            }),
-        }
-    );
+    const response = await fetch(`${AUTH_SERVER}/connect/token`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+            grant_type: "authorization_code",
+            client_id: CLIENT_ID,
+            code,
+            redirect_uri: REDIRECT_URI,
+            code_verifier: verifier,
+        }),
+    });
 
     if (!response.ok) {
         const text = await response.text();
 
-        throw new Error(
-            `Token request failed: ${response.status} ${text}`
-        );
+        throw new Error(`Token request failed: ${response.status} ${text}`);
     }
 
-    const token = await response.json();
+    const token: unknown = await response.json();
+
+    if (
+        typeof token !== "object" ||
+        token === null ||
+        !("access_token" in token) ||
+        typeof token.access_token !== "string"
+    ) {
+        throw new Error("Token response does not contain a valid access_token");
+    }
 
     sessionStorage.removeItem(STATE_KEY);
     sessionStorage.removeItem(VERIFIER_KEY);
 
-    sessionStorage.setItem(
-        ACCESS_TOKEN_KEY,
-        token.access_token
-    );
+    sessionStorage.setItem(ACCESS_TOKEN_KEY, token.access_token);
 }
 
 export function getAccessToken(): string | null {

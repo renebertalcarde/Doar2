@@ -1,7 +1,3 @@
-const AuthCallback = lazy(
-    () => import("./pages/auth-callback")
-);
-import AuthGuard from "./components/auth-guard";
 import { Suspense, lazy } from "react";
 import {
     BrowserRouter as Router,
@@ -9,12 +5,14 @@ import {
     Route,
     Outlet,
 } from "react-router-dom";
+import AuthGuard from "./components/auth-guard";
 import Preloader from "./components/preloader";
 import Layout from "./layouts";
 import Layout02 from "./layouts/layout-02";
 
-// Classic Pages
+const AuthCallback = lazy(() => import("./pages/auth-callback"));
 
+// Classic Pages
 const DashboardOne = lazy(() => import("./pages/dashboard-one"));
 const DashboardTwo = lazy(() => import("./pages/dashboard-two"));
 const DashboardThree = lazy(() => import("./pages/dashboard-three"));
@@ -125,7 +123,7 @@ const App = () => {
                             <Route element={<AuthGuard />}>
                                 <Route path="/home" element={<Home />} />
                             </Route>
-                             
+
                             {/* Dashboard Routes */}
                             <Route path="/" element={<DashboardOne />} />
                             <Route
@@ -152,7 +150,10 @@ const App = () => {
                             {/* Authentication Routes */}
                             <Route path="/signin" element={<SignIn />} />
                             <Route path="/signup" element={<SignUp />} />
-                            <Route path="/auth/callback" element={<AuthCallback />}/>
+                            <Route
+                                path="/auth/callback"
+                                element={<AuthCallback />}
+                            />
                             <Route
                                 path="/verify-account"
                                 element={<VerifyAccount />}

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState, useEffect } from "react";
+import { useState, useEffect, type MouseEvent } from "react";
 import { VectorMap as VectorMapComponent } from "@south-paw/react-vector-maps";
 import worldLowRes from "@doar/shared/data/maps/world-low-res.json";
 import { LayoutProps } from "@doar/shared/styled";
@@ -80,9 +80,12 @@ const VectorMap = ({
     const [tooltipY, setTooltipY] = useState<number>(0);
     const [tooltipX, setTooltipX] = useState<number>(0);
 
-    const onClick = (e: MouseEvent) => {
-        const target = e.target as HTMLElement;
-        const id: string = (target.attributes as any)?.id.value;
+    const onClick = (e: MouseEvent<SVGPathElement>) => {
+        const target = e.target as SVGPathElement;
+        const id = target.getAttribute("id");
+
+        if (!id) return;
+
         if (selected.includes(id)) {
             setSelected(selected.filter((sid) => sid !== id));
         } else {
@@ -90,14 +93,15 @@ const VectorMap = ({
         }
     };
 
-    const onMouseOver = (e: MouseEvent) => {
-        const target = e.target as HTMLElement;
-        const name: string = (target.attributes as any)?.name.value;
+    const onMouseOver = (e: MouseEvent<SVGPathElement>) => {
+        const target = e.target as SVGPathElement;
+        const name = target.getAttribute("name") ?? "";
+
         setTooltipeName(name);
         setIsTooltipVisible(true);
     };
 
-    const onMouseMove = (e: MouseEvent) => {
+    const onMouseMove = (e: MouseEvent<SVGPathElement>) => {
         setTooltipY(e.clientY - 20);
         setTooltipX(e.clientX - 10);
     };
